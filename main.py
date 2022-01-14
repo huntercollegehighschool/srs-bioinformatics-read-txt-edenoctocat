@@ -1,16 +1,17 @@
 import os
-program = input("A or B?").upper()
+program = input("A or B? ").upper()
 
 while program not in ["A", "B"]:
   os.system('clear')
   print("Invalid input.")
-  program = input("A or B?").upper()
+  program = input("A or B? ").upper()
 
 if program == "A":
-  import Asampleread
+  from Asampleread import readfile
+  print(readfile("sample.txt"))
 
 elif program == "B":
   import Baminoacids
   protein = "SKADYEK"
-  Baminoacids.weightedstring(protein)
+  print(Baminoacids.weightedstring(protein))
   
